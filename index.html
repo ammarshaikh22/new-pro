@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .main {
+            width: 100%;
+            height: 100vh;
+            background: url(2024.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+        }
+        .layout {
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h2,
+        h1 {
+            text-align: center;
+            padding-top: 40px;
+            font-size: 50px;
+            font-family: 'Silkscreen', sans-serif;
+            font-weight: bold;
+            color: rgb(255, 239, 92);
+        }
+        .clock {
+            display: flex;
+            padding-top: 50px;
+        }
+        .clock div {
+            width: 200px;
+            font-size: 18px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .clock div input {
+            width: 60%;
+            height: 40px;
+            display: block;
+            font-size: 20px;
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: rgb(0, 0, 0);
+            border-radius: 5px;
+            border-color: transparent;
+        }
+        .clock div label {
+            font-size: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: rgb(255, 255, 255);
+            padding-top: 10px;
+        }
+        @media screen and (max-width: 1000px) {
+            .main {
+                height: 120vh;
+            }
+
+            .layout {
+                height: 120vh;
+            }
+            .clock {
+                flex-direction: column;
+                align-items: center;
+            }
+            .clock div {
+                width: 100%;
+            }
+            h1 {
+                font-size: 30px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            .clock div input {
+                height: 30px;
+                font-size: 15px;
+                text-align: center;
+                margin-top: 13px;
+            }
+            .clock div label {
+                font-size: 15px;
+            }
+
+            
+        }
+    </style>
+    <div class="main">
+        <div class="layout">
+        <h1>Happy New Year</h1>
+        <h2 id="date">1 January 2024 12:00 PM</h2>
+        <div class="clock">
+            <div>
+                <br>
+                <label for="">DAYS</label>
+                <br>
+                <input type="text" readonly value="0">
+            </div>
+            <div>
+                <br>
+                <label for="">HOURS</label>
+                <br>
+                <input type="text" readonly value="0">
+              
+            </div>
+            <div>
+                <br>
+                <label for="">MINUTES</label>
+                <br>
+                <input type="text" readonly value="0">
+            </div>
+            <div>
+                <br>
+                <label for="">SECONDS</label>
+                <br>
+                <input type="text" readonly value="0">
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
